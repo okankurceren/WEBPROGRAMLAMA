@@ -1,0 +1,40 @@
+version: '3'
+
+services:
+  # React uygulaması
+  react-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./path/to/your/react/app:/app
+    depends_on:
+      - laravel-api
+
+  # Laravel API
+  laravel-api:
+    image: your-laravel-image:tag
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./path/to/your/laravel/app:/var/www/html
+    environment:
+      - DB_CONNECTION=mysql
+      - DB_HOST=mysql
+      - DB_PORT=3306
+      - DB_DATABASE=your_database
+      - DB_USERNAME=your_username
+      - DB_PASSWORD=your_password
+
+  # MySQL veritabanı
+  mysql:
+    image: mysql:5.7
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=your_root_password
+      - MYSQL_DATABASE=your_database
+      - MYSQL_USER=your_username
+      - MYSQL_PASSWORD=your_password

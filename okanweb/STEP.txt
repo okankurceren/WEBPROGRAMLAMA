@@ -1,0 +1,18 @@
+laravel projesi : composer create-project --prefer-dist laravel/laravel FutbolcuYonetimSistemi
+model ve migration : php artisan make:model Futbolcu -m
+migration düzenlendi
+php artisan migrate yapıldı
+api.php düzenlendi
+controller : php artisan make:controller FutbolcuController
+
+
+react projesi: npx create-react-app futbolcu-arayuz
+FutbolcuEkle.js
+FutbolcuDuzenle.js   FutbolcuDuzenle.css
+FutbolcuListesi.js
+
+
+docker-compose -f docker-compose-react.yml up
+
+
+docker-compose -f docker-compose-laravel.yml up

@@ -1,0 +1,47 @@
+.futbolcu-listesi {
+  list-style: none;
+  padding: 0;
+}
+
+.futbolcu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.futbolcu-item:hover {
+  transform: scale(1.02);
+}
+
+.futbolcu-item span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.sil-btn,
+.guncelle-btn {
+  padding: 10px;
+  margin-left: 8px;
+  cursor: pointer;
+  border: none;
+  background-color: #dc3545;
+  color: #fff;
+  border-radius: 4px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.guncelle-btn {
+  background-color: #007bff;
+}
+
+.sil-btn:hover,
+.guncelle-btn:hover {
+  background-color: #bd2130;
+}
